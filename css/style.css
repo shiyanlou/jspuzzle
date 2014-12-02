@@ -1,0 +1,151 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* wrapper */
+#wrapper {
+    width: 900px;
+    margin: 0 auto;
+    padding: 0 30px;
+    background-color: #F0F0F0;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    min-height: 100%;
+}
+
+/* 游戏标题 */
+h1 {
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 60px;
+}
+h1 span {
+    position: relative;
+    /* 标题移动效果 */
+    -webkit-transition: left 1s ease;
+    -moz-transition: left 1s ease;
+    -o-transition: left 1s ease;
+    -ms-transition: left 1s ease;
+    transition: left 1s ease;
+}
+#slide {
+    font-weight: normal;
+    left: 460px;
+    margin-right: 20px;
+}
+#gram {
+    left: -280px;
+}
+
+/* 游戏区域 */
+#game {
+    width: inherit;
+    height: 540px;
+    margin-bottom: 10px;
+}
+#preview, #puzzle {
+    position: relative;
+    float: left;
+    height: inherit;
+}
+
+/* 游戏完整拼图预览区域 */
+/* 预览图在初始化游戏时加载 */
+#preview {
+    width: 330px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+    border-radius: 20px 0 0 20px;
+}
+#preview h2 {
+    display: inline-block;
+    margin: 0;
+    margin-top: 15px;
+    padding: 5px 20px;
+    background: #F0F0F0;
+    border: 1px solid black;
+    border-bottom: 0;
+    border-radius: 20px 20px 0 0;
+}
+#preview img {
+    width: inherit;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+#rules {
+    width: inherit;
+}
+#preview ol {
+    text-align: left;
+    font-size: 14px;
+}
+
+#puzzle {
+	width: 540px;
+}
+#puzzle div {
+	position: absolute;
+	width: 135px;
+	height: 135px;
+}
+
+/* 图块移动 */
+.puzzlePiece {
+    background-size: 540px 540px;
+    /* 图块移动效果 */
+    -webkit-transition: box-shadow 0.3s ease, top 0.3s ease, left 0.3s ease;
+    -moz-transition: box-shadow 0.3s ease, top 0.3s ease, left 0.3s ease;
+    -o-transition: box-shadow 0.3s ease, top 0.3s ease, left 0.3s ease;
+    -ms-transition: box-shadow 0.3s ease, top 0.3s ease, left 0.3s ease;
+    transition: box-shadow 0.3s ease, top 0.3s ease, left 0.3s ease;
+}
+.puzzlePiece:hover {
+    z-index: 1;
+    box-shadow: 0 0 20px black;
+}
+.pieceSelected {
+    opacity: 0.5;
+}
+.blankPiece {
+    background: white;
+}
+
+/* 胜利信息 */
+#won {
+    position: fixed;
+    z-index: 4;
+    bottom: -300px;
+    margin-bottom: -150px;
+    left: 50%;
+    margin-left: -150px;
+    width: 300px;
+    height: 300px;
+    border-radius: 150px;
+    box-shadow: 0 0 20px black;
+    background: url('http://anything-about-doc.qiniudn.com/javascript-puzzle/clapping.gif') no-repeat center;
+    cursor: pointer;
+    /* Animation for won message*/
+    -webkit-transition: bottom 1s ease;
+    -moz-transition: bottom 1s ease;
+    -o-transition: bottom 1s ease;
+    -ms-transition: bottom 1s ease;
+    transition: bottom 1s ease;
+}
+#won div {
+    position: absolute;
+    top: 50%;
+    margin-top: -35px;
+    width: inherit;
+    height: 100px;
+    color: white;
+    text-align: center;
+}
+#won div > * {
+    margin: 0;
+}
+#won p {
+    margin-top: 10px;
+}
